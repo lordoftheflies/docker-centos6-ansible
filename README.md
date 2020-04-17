@@ -1,6 +1,6 @@
 # CentOS 6 Ansible Test Image
 
-[![Build Status](https://travis-ci.org/geerlingguy/docker-centos6-ansible.svg?branch=master)](https://travis-ci.org/geerlingguy/docker-centos6-ansible) [![Docker Automated build](https://img.shields.io/docker/automated/geerlingguy/docker-centos6-ansible.svg?maxAge=2592000)](https://hub.docker.com/r/geerlingguy/docker-centos6-ansible/)
+[![Build Status](https://travis-ci.org/lordoftheflies/docker-centos6-ansible.svg?branch=master)](https://travis-ci.org/lordoftheflies/docker-centos6-ansible) [![Docker Automated build](https://img.shields.io/docker/automated/lordoftheflies/docker-centos6-ansible.svg?maxAge=2592000)](https://hub.docker.com/r/lordoftheflies/docker-centos6-ansible/)
 
 CentOS 6 Docker container for Ansible playbook and role testing.
 
@@ -15,8 +15,8 @@ This image is built on Docker Hub automatically any time the upstream OS contain
 ## How to Use
 
   1. [Install Docker](https://docs.docker.com/engine/installation/).
-  2. Pull this image from Docker Hub: `docker pull geerlingguy/docker-centos6-ansible:latest` (or use the image you built earlier, e.g. `centos6-ansible`).
-  3. Run a container from the image: `docker run --detach --privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro geerlingguy/docker-centos6-ansible:latest` (to test my Ansible roles, I add in a volume mounted from the current working directory with ``--volume=`pwd`:/etc/ansible/roles/role_under_test:ro``).
+  2. Pull this image from Docker Hub: `docker pull lordoftheflies/docker-centos6-ansible:latest` (or use the image you built earlier, e.g. `centos6-ansible`).
+  3. Run a container from the image: `docker run --detach --privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro lordoftheflies/docker-centos6-ansible:latest` (to test my Ansible roles, I add in a volume mounted from the current working directory with ``--volume=`pwd`:/etc/ansible/roles/role_under_test:ro``).
   4. Use Ansible inside the container:
     a. `docker exec --tty [container_id] env TERM=xterm ansible --version`
     b. `docker exec --tty [container_id] env TERM=xterm ansible-playbook /path/to/ansible/playbook.yml --syntax-check`

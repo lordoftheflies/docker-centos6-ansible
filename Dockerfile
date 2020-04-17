@@ -1,5 +1,5 @@
 FROM centos:6
-LABEL maintainer="Jeff Geerling"
+LABEL maintainer="László Hegedűs"
 
 # Install Ansible and other requirements.
 RUN yum makecache fast \
